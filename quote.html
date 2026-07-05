@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+<!--
+  ============================================================
+  KJT SERVICES — QUOTE PAGE (v2)
+  The quote form already sends to kieran.townson@outlook.com —
+  see the comment above the <form> tag for the one-time
+  activation step. Search this file for "EDIT:" to find the
+  remaining placeholders (working hours, service list, town,
+  response-time promise, og:url).
+  ============================================================
+-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- tints the browser chrome to match the dark header -->
+  <meta name="theme-color" content="#070f1c">
+  <title>Get a Free Quote — KJT Services</title>
+  <meta name="description" content="Request a free, no-obligation quote from KJT Services. Tell us about your home improvement or maintenance job and we'll get back to you within one working day.">
+
+  <!-- Open Graph (how this page looks when shared on Facebook etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KJT Services">
+  <meta property="og:title" content="Get a Free Quote — KJT Services">
+  <meta property="og:description" content="Tell us about the job and get a free, no-obligation quote back within one working day. Call 07837 924403 or use the two-minute form.">
+  <meta property="og:locale" content="en_GB">
+  <!-- EDIT: once the site is live, uncomment these two lines and set
+       the real web address + share photo (same image as index is fine).
+  <meta property="og:url" content="https://www.your-domain.co.uk/quote.html">
+  <meta property="og:image" content="https://www.your-domain.co.uk/photos/og-image.jpg">
+  -->
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1626'/%3E%3Ctext x='32' y='46' font-family='Arial,sans-serif' font-size='40' font-weight='800' text-anchor='middle' fill='%23ff7a1a'%3EK%3C/text%3E%3C/svg%3E">
+  <!-- iOS "Add to Home Screen" icon (iOS can't use the SVG favicon) -->
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <!-- set before first paint so the mobile menu never flashes open -->
+  <script>document.documentElement.classList.add("js")</script>
+
+  <!-- EDIT: structured data for Google. Only CONFIRMED facts are
+       published live (see the matching note in index.html for the
+       address/areaServed/hours lines to add back once they're real). -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "KJT Services",
+    "description": "Home improvements and property maintenance — a trustworthy professional service finished to the highest of standards. Free, no-obligation quotes.",
+    "slogan": "A trustworthy professional service finished to the highest of standards",
+    "founder": { "@type": "Person", "name": "Kieran Townson" },
+    "telephone": "+447837924403",
+    "email": "kieran.townson@outlook.com",
+    "sameAs": ["https://www.facebook.com/p/KJT-Services-61572995855785/"],
+    "priceRange": "££"
+  }
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ======================= HEADER / NAV ======================= -->
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="KJT Services — home">
+        <span class="brand-mark" aria-hidden="true">KJT</span>
+        <span class="brand-name">Services</span>
+      </a>
+
+      <div class="nav-actions">
+        <a class="header-phone" href="tel:+447837924403">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1z" fill="currentColor"/></svg>
+          07837 924403
+        </a>
+        <a class="btn btn-primary header-cta" href="quote.html" aria-current="page">Get a Quote</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span class="nav-toggle-bars" aria-hidden="true"></span>
+          <span class="visually-hidden">Open menu</span>
+        </button>
+      </div>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#gallery">Our Work</a></li>
+          <li><a href="index.html#testimonials">Reviews</a></li>
+          <li><a href="index.html#faq">FAQs</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li class="nav-cta"><a class="btn btn-primary" href="quote.html" aria-current="page">Get a Quote</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ======================= PAGE INTRO ======================= -->
+    <section class="page-hero" aria-labelledby="quote-heading">
+      <div class="container">
+        <p class="eyebrow">Free &amp; no obligation</p>
+        <h1 id="quote-heading">Get your free quote</h1>
+        <p class="hero-sub">Tell us a bit about the job and we'll come back to you with an honest price — usually within one working day.</p>
+        <ul class="hero-badges" aria-label="What to expect">
+          <li>Takes about two minutes</li>
+          <li>No call-out fee, no pressure</li>
+          <!-- EDIT: guessed response-time promise — adjust if needed -->
+          <li>Reply within 1 working day</li>
+        </ul>
+      </div>
+      <div class="hero-slant" aria-hidden="true"></div>
+    </section>
+
+    <!-- ======================= WHAT HAPPENS NEXT ======================= -->
+    <section class="next-steps" aria-labelledby="next-steps-heading">
+      <div class="container">
+        <h2 class="next-steps-title" id="next-steps-heading">What happens next</h2>
+        <!-- role="list" restores list semantics that Safari/VoiceOver
+             drop when list-style is removed -->
+        <ol class="next-steps-grid" role="list">
+          <li class="next-step">
+            <span class="visually-hidden">Step 1:</span>
+            <span class="next-num" aria-hidden="true">1</span>
+            <span>
+              <strong>Send your request</strong>
+              <small>Fill in the form below — or just call if that's easier.</small>
+            </span>
+          </li>
+          <li class="next-step">
+            <span class="visually-hidden">Step 2:</span>
+            <span class="next-num" aria-hidden="true">2</span>
+            <span>
+              <strong>We reply within 1 working day</strong>
+              <!-- EDIT: guessed response-time promise — adjust if needed -->
+              <small>Usually sooner — with any questions about the job.</small>
+            </span>
+          </li>
+          <li class="next-step">
+            <span class="visually-hidden">Step 3:</span>
+            <span class="next-num" aria-hidden="true">3</span>
+            <span>
+              <strong>Free visit &amp; firm quote</strong>
+              <small>A clear written price. No vague estimates, no obligation.</small>
+            </span>
+          </li>
+          <li class="next-step">
+            <span class="visually-hidden">Step 4:</span>
+            <span class="next-num" aria-hidden="true">4</span>
+            <span>
+              <strong>Work booked in</strong>
+              <small>We agree a date, turn up on time, and finish properly.</small>
+            </span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ======================= QUOTE FORM ======================= -->
+    <section class="section" aria-label="Quote request form">
+      <div class="container quote-layout">
+
+        <div class="quote-form-wrap reveal">
+          <h2 class="form-title">Tell us about the job</h2>
+          <p class="form-intro">The more detail the better — but a rough idea is fine. We'll ask the right questions when we reply.</p>
+          <!--
+            ============================================================
+            QUOTE FORM — ONE-TIME ACTIVATION STILL NEEDED
+            ============================================================
+            1. The form below already sends every submission to
+                 kieran.townson@outlook.com
+               via FormSubmit (formsubmit.co) — a free service, no
+               account needed.
+
+            2. The FIRST time someone submits the form, FormSubmit
+               emails that address a one-time ACTIVATION link. Click
+               it once and every submission after that lands straight
+               in the inbox.
+
+               Tip: FormSubmit's activation email also gives you a
+               random alias address (like abc123@formsubmit.co). If
+               you put that in the action URL instead, the real
+               email never appears in the page code.
+
+            3. The hidden fields below are already set up:
+                 _subject  — the subject line of the email you get
+                 _captcha  — "false" turns off FormSubmit's captcha page
+                 _template — "table" formats the email neatly
+                 _honey    — an invisible honeypot field that traps
+                             spam bots (leave it exactly as is)
+            ============================================================
+          -->
+          <form action="https://formsubmit.co/kieran.townson@outlook.com" method="POST" class="quote-form" id="quote-form">
+            <input type="hidden" name="_subject" value="New quote request from the KJT Services website">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Name <span class="req" aria-hidden="true">*</span></label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+              </div>
+
+              <div class="field">
+                <label for="phone">Phone <span class="req" aria-hidden="true">*</span></label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+              </div>
+
+              <div class="field">
+                <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" autocomplete="email" required>
+              </div>
+
+              <div class="field">
+                <label for="address">Address / Town <span class="optional">(optional)</span></label>
+                <input type="text" id="address" name="address" autocomplete="street-address">
+              </div>
+
+              <div class="field">
+                <label for="service">Service needed <span class="req" aria-hidden="true">*</span></label>
+                <!-- EDIT: keep these options in step with the Services section on index.html -->
+                <select id="service" name="service" required>
+                  <option value="" selected disabled>Choose a service…</option>
+                  <option>General home improvements</option>
+                  <option>Kitchen fitting / refresh</option>
+                  <option>Bathroom fitting / refresh</option>
+                  <option>Painting &amp; decorating</option>
+                  <option>Carpentry &amp; joinery</option>
+                  <option>Plastering &amp; tiling</option>
+                  <option>Repairs &amp; maintenance</option>
+                  <option>Something else</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="date">Preferred date <span class="optional">(optional)</span></label>
+                <input type="date" id="date" name="preferred_date">
+              </div>
+
+              <div class="field">
+                <label for="best-time">Best time to call</label>
+                <select id="best-time" name="best_time_to_call">
+                  <option selected>Any time</option>
+                  <option>Morning</option>
+                  <option>Afternoon</option>
+                  <option>Evening (after 5pm)</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="found-us">How did you find us? <span class="optional">(optional)</span></label>
+                <select id="found-us" name="how_did_you_find_us">
+                  <option value="" selected>Choose…</option>
+                  <option>Facebook</option>
+                  <option>Recommendation / word of mouth</option>
+                  <option>Search engine</option>
+                  <option>Somewhere else</option>
+                </select>
+              </div>
+
+              <div class="field field-full">
+                <label for="details">Job details <span class="req" aria-hidden="true">*</span></label>
+                <textarea id="details" name="details" rows="6" required
+                  placeholder="Tell us about the job — what needs doing, roughly what size, and anything else useful."></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Send my quote request</button>
+            <p class="form-note">We'll only use your details to respond to your enquiry — no spam, no mailing lists.</p>
+            <ul class="form-reassure" aria-label="Reassurance">
+              <li>Free quote</li>
+              <li>No obligation</li>
+              <!-- EDIT: guessed response-time promise — adjust if needed -->
+              <li>Reply within 1 working day</li>
+            </ul>
+          </form>
+        </div>
+
+        <!-- ======================= SIDEBAR ======================= -->
+        <aside class="quote-aside" aria-label="Other ways to get in touch">
+
+          <div class="talk-card reveal" aria-labelledby="talk-heading">
+            <h2 id="talk-heading">Prefer to talk?</h2>
+            <p>No problem — call or message and we'll sort your quote over the phone.</p>
+            <ul class="talk-list">
+              <li>
+                <span class="talk-label">Call or text</span>
+                <a class="talk-value" href="tel:+447837924403">07837 924403</a>
+              </li>
+              <li>
+                <span class="talk-label">Email</span>
+                <a class="talk-value" href="mailto:kieran.townson@outlook.com">kieran.townson@outlook.com</a>
+              </li>
+              <li>
+                <span class="talk-label">Facebook</span>
+                <a class="talk-value" href="https://www.facebook.com/p/KJT-Services-61572995855785/" rel="noopener" target="_blank">Message us on Facebook</a>
+              </li>
+              <li>
+                <span class="talk-label">Hours</span>
+                <!-- EDIT: replace with your real working hours -->
+                <span class="talk-value">Mon–Sat, 8am–6pm</span>
+              </li>
+            </ul>
+            <p class="talk-tip">Tip: message us a few photos of the job on Facebook for a quicker, more accurate quote.</p>
+          </div>
+
+          <!-- EDIT: sample review — swap in a real one (match it to a
+               genuine Facebook recommendation) or remove this card -->
+          <div class="trust-mini reveal" aria-label="Recent customer review">
+            <div class="stars" role="img" aria-label="Rated 5 out of 5 stars"><span aria-hidden="true">★★★★★</span></div>
+            <blockquote>
+              <p>“Quick quote, fair price, and the work was spot on. Couldn't ask for more.”</p>
+              <footer><cite>David R.</cite> — decorating &amp; repairs</footer>
+            </blockquote>
+            <ul class="trust-mini-list">
+              <li>Free, no-obligation quotes</li>
+              <li>The quoted price is the price you pay</li>
+              <li>No job too small</li>
+            </ul>
+          </div>
+
+        </aside>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="site-footer" id="contact">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <p class="brand footer-brand"><span class="brand-mark" aria-hidden="true">KJT</span> <span class="brand-name">Services</span></p>
+        <p class="footer-blurb">A trustworthy professional service finished to the highest of standards. Message for a free quote or give us a call.</p>
+      </div>
+
+      <div class="footer-col">
+        <h2 class="footer-heading">Contact</h2>
+        <ul class="footer-list">
+          <li>
+            <a href="tel:+447837924403">07837 924403</a>
+          </li>
+          <li>
+            <a href="mailto:kieran.townson@outlook.com">kieran.townson@outlook.com</a>
+          </li>
+          <li>
+            <!-- EDIT: replace with your real town / service area -->
+            Serving Yourtown &amp; surrounding areas
+          </li>
+          <li>
+            <!-- EDIT: replace with your real working hours -->
+            Mon–Sat, 8am–6pm
+          </li>
+          <li>
+            <a href="https://www.facebook.com/p/KJT-Services-61572995855785/" rel="noopener" target="_blank">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.2 0-1-.1-1.9-.1-1.9 0-3.3 1.2-3.3 3.4V11H8.5v3h2.7v7z" fill="currentColor"/></svg>
+              Find us on Facebook
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h2 class="footer-heading">Quick links</h2>
+        <ul class="footer-list">
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#how">How it works</a></li>
+          <li><a href="index.html#gallery">Our Work</a></li>
+          <li><a href="index.html#testimonials">Reviews</a></li>
+          <li><a href="index.html#faq">FAQs</a></li>
+          <li><a href="quote.html">Get a Quote</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 KJT Services. All rights reserved.</p>
+        <p>Done properly, or not at all.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- back to top: a plain anchor, so it still works without JS;
+       script.js only handles fading it in after you scroll -->
+  <a class="back-to-top" href="#top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

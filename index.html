@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+<!--
+  ============================================================
+  KJT SERVICES — WEBSITE QUICK-EDIT GUIDE (v2)
+  ============================================================
+  Everything that needs YOUR real details is marked in the code
+  below with a comment starting  "EDIT:".  Search this file (and
+  quote.html) for "EDIT:" to find every spot. Summary:
+
+    CONFIRMED (already correct — no change needed):
+      - Business name:  KJT Services
+      - Tagline:        "A trustworthy professional service
+                         finished to the highest of standards"
+      - Phone:          07837 924403
+      - Email:          kieran.townson@outlook.com
+      - Facebook:       facebook.com/p/KJT-Services-61572995855785/
+
+    PLACEHOLDERS TO REPLACE:
+      - Website address            (og:url meta tag — set once live)
+      - Town / service area        (structured data, hero, service-
+                                    area section chips, footer)
+      - Stats strip numbers        (jobs completed / years / rating —
+                                    guessed starting figures)
+      - Exact list of services     (services section + quote form
+                                    dropdown — match your real work)
+      - Gallery photos + captions  (6 placeholder tiles — swap in
+                                    real job photos, see comments)
+      - Testimonials               (3 sample reviews — replace with
+                                    real customer feedback)
+      - FAQ answers                (insurance, payment, start times —
+                                    confirm every claim is true)
+      - Working hours              (footer + quote page + JSON-LD)
+  ============================================================
+-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- tints the browser chrome to match the dark header -->
+  <meta name="theme-color" content="#070f1c">
+  <title>KJT Services — Home Improvements &amp; Property Maintenance</title>
+  <meta name="description" content="KJT Services — a trustworthy, professional home improvement and property maintenance service, finished to the highest of standards. Free quotes. Call 07837 924403.">
+
+  <!-- Open Graph (how the site looks when shared on Facebook etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KJT Services">
+  <meta property="og:title" content="KJT Services — Home Improvements &amp; Property Maintenance">
+  <meta property="og:description" content="A trustworthy professional service finished to the highest of standards. Free, no-obligation quotes — call 07837 924403.">
+  <meta property="og:locale" content="en_GB">
+  <!-- EDIT: once the site is live, uncomment these two lines and set
+       the real web address plus a real photo for the share image
+       (ideally 1200x630px). Open Graph works fine without them until
+       then; shares simply default to the page's actual URL.
+  <meta property="og:url" content="https://www.your-domain.co.uk/">
+  <meta property="og:image" content="https://www.your-domain.co.uk/photos/og-image.jpg">
+  -->
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1626'/%3E%3Ctext x='32' y='46' font-family='Arial,sans-serif' font-size='40' font-weight='800' text-anchor='middle' fill='%23ff7a1a'%3EK%3C/text%3E%3C/svg%3E">
+  <!-- iOS "Add to Home Screen" icon (iOS can't use the SVG favicon) -->
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <!-- set before first paint so the mobile menu never flashes open -->
+  <script>document.documentElement.classList.add("js")</script>
+
+  <!-- EDIT: structured data for Google. Only CONFIRMED facts are
+       published live (search engines treat this block as fact, so
+       placeholder towns/hours must not ship in it). Once your real
+       town and hours are set, add these lines back into the JSON
+       below, just before the closing brace:
+         ,"address": { "@type": "PostalAddress", "addressLocality": "Yourtown", "addressCountry": "GB" },
+         "areaServed": "Yourtown and surrounding areas",
+         "openingHoursSpecification": [{ "@type": "OpeningHoursSpecification",
+           "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+           "opens": "08:00", "closes": "18:00" }]
+  -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "KJT Services",
+    "description": "Home improvements and property maintenance — a trustworthy professional service finished to the highest of standards. Free, no-obligation quotes.",
+    "slogan": "A trustworthy professional service finished to the highest of standards",
+    "founder": { "@type": "Person", "name": "Kieran Townson" },
+    "telephone": "+447837924403",
+    "email": "kieran.townson@outlook.com",
+    "sameAs": ["https://www.facebook.com/p/KJT-Services-61572995855785/"],
+    "priceRange": "££"
+  }
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ======================= HEADER / NAV ======================= -->
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="KJT Services — home">
+        <span class="brand-mark" aria-hidden="true">KJT</span>
+        <span class="brand-name">Services</span>
+      </a>
+
+      <div class="nav-actions">
+        <a class="header-phone" href="tel:+447837924403">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1z" fill="currentColor"/></svg>
+          07837 924403
+        </a>
+        <a class="btn btn-primary header-cta" href="quote.html">Get a Quote</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span class="nav-toggle-bars" aria-hidden="true"></span>
+          <span class="visually-hidden">Open menu</span>
+        </button>
+      </div>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Our Work</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#faq">FAQs</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="nav-cta"><a class="btn btn-primary" href="quote.html">Get a Quote</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ======================= HERO ======================= -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Home improvements &amp; property maintenance
+            <!-- EDIT: add your town/area, e.g. "…maintenance in Sheffield &amp; surrounds" -->
+          </p>
+          <h1 id="hero-heading">A trustworthy, professional service — finished to the <em>highest of standards.</em></h1>
+          <p class="hero-sub">From small repairs to full room refurbishments, KJT Services takes care of the jobs on your list — done properly, on time, and at a fair price. No job too small.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg" href="quote.html">Get a Free Quote</a>
+            <a class="btn btn-ghost btn-lg" href="tel:+447837924403">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1z" fill="currentColor"/></svg>
+              Call 07837 924403
+            </a>
+          </div>
+          <ul class="hero-badges" aria-label="Why choose KJT Services">
+            <li>Free, no-obligation quotes</li>
+            <li>Friendly local tradesman</li>
+            <li>Tidy, reliable &amp; on time</li>
+          </ul>
+        </div>
+
+        <!-- hero trust card: instant proof next to the headline -->
+        <aside class="hero-card reveal" aria-label="Customer rating and service promises">
+          <div class="hero-card-rating">
+            <div class="stars" role="img" aria-label="Rated 5 out of 5 stars"><span aria-hidden="true">★★★★★</span></div>
+            <div>
+              <!-- EDIT: guessed rating summary — match your real Facebook
+                   recommendations before publishing -->
+              <strong>5.0 from local customers</strong>
+              <small>Recommended on Facebook</small>
+            </div>
+          </div>
+          <ul class="hero-card-list">
+            <li>
+              <span class="check" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="m2.5 8.5 3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span><strong>Quotes are always free</strong>
+              <small>No call-out charge, no pressure — a clear price before any work starts.</small></span>
+            </li>
+            <li>
+              <span class="check" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="m2.5 8.5 3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <!-- EDIT: guessed response-time promise — change if you
+                   can't reliably reply within one working day -->
+              <span><strong>Replies within 1 working day</strong>
+              <small>Message, call or use the quote form — you'll hear back quickly.</small></span>
+            </li>
+            <li>
+              <span class="check" aria-hidden="true"><svg viewBox="0 0 16 16" focusable="false"><path d="m2.5 8.5 3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span><strong>One point of contact</strong>
+              <small>Deal directly with Kieran from first message to finished job.</small></span>
+            </li>
+          </ul>
+          <p class="hero-card-note">Prefer to message? <a href="https://www.facebook.com/p/KJT-Services-61572995855785/" rel="noopener" target="_blank">Find us on Facebook</a> — photos of the job welcome.</p>
+        </aside>
+      </div>
+      <div class="hero-slant" aria-hidden="true"></div>
+    </section>
+
+    <!-- ======================= STATS / TRUST STRIP ======================= -->
+    <!-- EDIT: the first three figures below are sensible GUESSES to get
+         you started — replace them with your real numbers (or delete a
+         stat you can't stand behind). -->
+    <section class="stats-strip" aria-label="KJT Services at a glance">
+      <div class="container stats-grid">
+        <div class="stat">
+          <span class="stat-num">300+</span>
+          <span class="stat-label">Jobs completed</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">10+ yrs</span>
+          <span class="stat-label">Hands-on experience</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">5&#9733;</span>
+          <span class="stat-label">Rated by customers</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">Free, no-obligation quotes</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= SERVICES ======================= -->
+    <!-- EDIT: this service list is a sensible starting set for a home
+         improvement business — rename, remove or reword any card so it
+         matches the work you actually take on. Keep the quote form's
+         dropdown (quote.html) in step with whatever you choose. -->
+    <section class="section" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head-copy">
+            <p class="eyebrow">What we do</p>
+            <h2 id="services-heading" class="section-title">Services built around your to-do list</h2>
+            <p class="section-lead">One reliable point of contact for the whole job — quoted up front and finished properly.</p>
+          </div>
+          <a class="link-more" href="quote.html">Get a free quote <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <div class="card-grid">
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false"><path d="M8 22 24 9l16 13" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 22v16h24V22" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 38v-9h8v9" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>General Home Improvements</h3>
+            <p>Upgrades and refurbishments that lift your whole home — from refreshing a single room to taking on bigger projects from start to finish.</p>
+            <a class="card-cta" href="quote.html">Quote this job <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false"><rect x="8" y="10" width="32" height="28" rx="2" fill="none" stroke="currentColor" stroke-width="3"/><path d="M8 22h32M24 22v16M14 16h6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Kitchens &amp; Bathrooms</h3>
+            <p>Fitting, refits and refreshes — cabinets, worktops, sinks, suites and finishing touches installed with care and attention to detail.</p>
+            <a class="card-cta" href="quote.html">Quote this job <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false"><rect x="10" y="8" width="24" height="10" rx="3" fill="none" stroke="currentColor" stroke-width="3"/><path d="M34 13h6v10H24v6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><rect x="21" y="29" width="6" height="12" rx="1" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+            </div>
+            <h3>Painting &amp; Decorating</h3>
+            <p>Crisp lines, clean finishes and proper prep. Interior and exterior painting, wallpapering and decorating that lasts.</p>
+            <a class="card-cta" href="quote.html">Quote this job <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false"><path d="M8 34 30 12l6 6L14 40l-8 2z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="m26 16 6 6M12 30l6 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Carpentry &amp; Joinery</h3>
+            <p>Doors hung, skirting and architrave fitted, shelving, flooring and made-to-measure woodwork — measured twice, cut once.</p>
+            <a class="card-cta" href="quote.html">Quote this job <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false"><path d="M8 8h14v14H8zM26 8h14v14H26zM8 26h14v14H8z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="m30 30 10 10M40 30 30 40" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Plastering &amp; Tiling</h3>
+            <p>Smooth walls and ceilings, neat splashbacks, and floor and wall tiling laid level and grouted clean.</p>
+            <a class="card-cta" href="quote.html">Quote this job <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" focusable="false"><path d="M30 8a10 10 0 0 0-12.6 12.6L6 32v10h10l11.4-11.4A10 10 0 0 0 40 18l-6 6-6-2-2-6z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Repairs &amp; Maintenance</h3>
+            <p>The odd jobs that never get done — leaky gutters, sticking doors, broken fixtures, flat-pack and more. No job too small.</p>
+            <a class="card-cta" href="quote.html">Quote this job <span class="arrow" aria-hidden="true">&rarr;</span></a>
+          </article>
+        </div>
+
+        <p class="services-note">Don't see your job listed? <a href="quote.html">Ask us anyway</a> — if it's not something we do, we'll tell you straight.</p>
+      </div>
+    </section>
+
+    <!-- ======================= HOW IT WORKS ======================= -->
+    <section class="section section-deep" id="how" aria-labelledby="how-heading">
+      <div class="container">
+        <p class="eyebrow">Simple from start to finish</p>
+        <h2 id="how-heading" class="section-title">How it works</h2>
+        <p class="section-lead">From first message to finished job in four straightforward steps — you'll always know what happens next.</p>
+
+        <!-- role="list" restores list semantics that Safari/VoiceOver
+             drop when list-style is removed -->
+        <ol class="steps" role="list">
+          <li class="step reveal">
+            <span class="visually-hidden">Step 1:</span>
+            <span class="step-num" aria-hidden="true">1</span>
+            <h3>Tell us about the job</h3>
+            <p>Use the <a href="quote.html">quote form</a>, call, or message us on Facebook. A few photos of the job help us help you faster.</p>
+          </li>
+          <li class="step reveal">
+            <span class="visually-hidden">Step 2:</span>
+            <span class="step-num" aria-hidden="true">2</span>
+            <h3>We get back to you fast</h3>
+            <!-- EDIT: guessed response-time promise — adjust if needed -->
+            <p>You'll hear back within one working day — usually sooner — with any questions and a time to visit if needed.</p>
+          </li>
+          <li class="step reveal">
+            <span class="visually-hidden">Step 3:</span>
+            <span class="step-num" aria-hidden="true">3</span>
+            <h3>Free visit &amp; firm quote</h3>
+            <p>We look at the job properly and give you a clear written price. No vague estimates, no obligation, no call-out fee.</p>
+          </li>
+          <li class="step reveal">
+            <span class="visually-hidden">Step 4:</span>
+            <span class="step-num" aria-hidden="true">4</span>
+            <h3>Work booked &amp; done properly</h3>
+            <p>We agree a date, turn up when we say, keep things tidy, and walk the finished job through with you before we leave.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ======================= GALLERY ======================= -->
+    <section class="section section-alt" id="gallery" aria-labelledby="gallery-heading">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head-copy">
+            <p class="eyebrow">Recent work</p>
+            <h2 id="gallery-heading" class="section-title">Jobs we're proud of</h2>
+            <p class="section-lead">A snapshot of recent projects. Tap any tile for a closer look.</p>
+          </div>
+          <a class="link-more" href="https://www.facebook.com/p/KJT-Services-61572995855785/" rel="noopener" target="_blank">More photos on Facebook <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <!-- EDIT: HOW TO SWAP IN REAL PHOTOS
+             Each tile below is a self-contained placeholder graphic.
+             To use a real photo, replace the whole <svg>…</svg> inside
+             the <button> with an image tag, e.g.:
+
+               <img src="photos/job1.jpg" alt="Fitted bathroom with grey tiles in [town]">
+
+             Keep the <button> and the two-line <figcaption> as they
+             are (bold title + one-line detail) — the lightbox and its
+             caption will keep working automatically. Update the
+             caption text to describe the real job. -->
+        <div class="gallery-grid">
+
+          <figure class="tile reveal">
+            <button class="tile-btn" type="button" aria-label="View larger: bathroom refit — full strip-out, new suite and wall tiling">
+              <svg viewBox="0 0 400 300" role="img" aria-label="Illustration of a bathroom refit" focusable="false">
+                <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16294a"/><stop offset="1" stop-color="#0b1626"/></linearGradient></defs>
+                <rect width="400" height="300" fill="url(#g1)"/>
+                <path d="M0 300 400 140v160z" fill="#ff7a1a" opacity=".12"/>
+                <g fill="none" stroke="#ff7a1a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M120 170h160v20a40 40 0 0 1-40 40h-80a40 40 0 0 1-40-40z"/>
+                  <path d="M120 170v-60a20 20 0 0 1 40 0"/>
+                  <path d="M148 122h24"/>
+                  <path d="M155 140v8M165 140v8M175 140v8" stroke-width="4"/>
+                </g>
+              </svg>
+            </button>
+            <figcaption>
+              <strong class="tile-title">Bathroom refit</strong>
+              <!-- EDIT: sample caption detail — describe the real job -->
+              <span class="tile-sub">Full strip-out, new suite &amp; wall tiling — done in five days</span>
+            </figcaption>
+          </figure>
+
+          <figure class="tile reveal">
+            <button class="tile-btn" type="button" aria-label="View larger: kitchen upgrade — new doors, worktops and splashback">
+              <svg viewBox="0 0 400 300" role="img" aria-label="Illustration of a kitchen upgrade" focusable="false">
+                <defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16294a"/><stop offset="1" stop-color="#0b1626"/></linearGradient></defs>
+                <rect width="400" height="300" fill="url(#g2)"/>
+                <path d="M0 300 400 140v160z" fill="#ff7a1a" opacity=".12"/>
+                <g fill="none" stroke="#ff7a1a" stroke-width="6" stroke-linejoin="round">
+                  <path d="M110 130h180v100H110z"/>
+                  <path d="M110 130h180" stroke-width="10"/>
+                  <path d="M200 130v100M110 180h90"/>
+                  <path d="M150 155v10M250 175v14" stroke-linecap="round"/>
+                </g>
+              </svg>
+            </button>
+            <figcaption>
+              <strong class="tile-title">Kitchen upgrade</strong>
+              <!-- EDIT: sample caption detail — describe the real job -->
+              <span class="tile-sub">New doors, worktops &amp; splashback on the existing units</span>
+            </figcaption>
+          </figure>
+
+          <figure class="tile reveal">
+            <button class="tile-btn" type="button" aria-label="View larger: painting and decorating — whole-house refresh">
+              <svg viewBox="0 0 400 300" role="img" aria-label="Illustration of painting and decorating" focusable="false">
+                <defs><linearGradient id="g3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16294a"/><stop offset="1" stop-color="#0b1626"/></linearGradient></defs>
+                <rect width="400" height="300" fill="url(#g3)"/>
+                <path d="M0 300 400 140v160z" fill="#ff7a1a" opacity=".12"/>
+                <g fill="none" stroke="#ff7a1a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="130" y="90" width="110" height="44" rx="10"/>
+                  <path d="M240 112h40v44h-70v22"/>
+                  <rect x="198" y="188" width="24" height="46" rx="4"/>
+                </g>
+              </svg>
+            </button>
+            <figcaption>
+              <strong class="tile-title">Painting &amp; decorating</strong>
+              <!-- EDIT: sample caption detail — describe the real job -->
+              <span class="tile-sub">Whole-house refresh — walls, ceilings &amp; woodwork</span>
+            </figcaption>
+          </figure>
+
+          <figure class="tile reveal">
+            <button class="tile-btn" type="button" aria-label="View larger: custom carpentry — made-to-measure alcove shelving">
+              <svg viewBox="0 0 400 300" role="img" aria-label="Illustration of custom carpentry" focusable="false">
+                <defs><linearGradient id="g4" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16294a"/><stop offset="1" stop-color="#0b1626"/></linearGradient></defs>
+                <rect width="400" height="300" fill="url(#g4)"/>
+                <path d="M0 300 400 140v160z" fill="#ff7a1a" opacity=".12"/>
+                <g fill="none" stroke="#ff7a1a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M110 200 250 96l34 34-118 96-52 12z"/>
+                  <path d="m232 112 34 34M160 168l30 30"/>
+                </g>
+              </svg>
+            </button>
+            <figcaption>
+              <strong class="tile-title">Custom carpentry</strong>
+              <!-- EDIT: sample caption detail — describe the real job -->
+              <span class="tile-sub">Made-to-measure alcove shelving, fitted &amp; painted</span>
+            </figcaption>
+          </figure>
+
+          <figure class="tile reveal">
+            <button class="tile-btn" type="button" aria-label="View larger: tiling and splashbacks — porcelain floor and wall tiles">
+              <svg viewBox="0 0 400 300" role="img" aria-label="Illustration of tiling and splashbacks" focusable="false">
+                <defs><linearGradient id="g5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16294a"/><stop offset="1" stop-color="#0b1626"/></linearGradient></defs>
+                <rect width="400" height="300" fill="url(#g5)"/>
+                <path d="M0 300 400 140v160z" fill="#ff7a1a" opacity=".12"/>
+                <g fill="none" stroke="#ff7a1a" stroke-width="6" stroke-linejoin="round">
+                  <path d="M120 90h72v56h-72zM208 90h72v56h-72zM120 162h72v56h-72z"/>
+                  <path d="m216 170 56 40M268 168l-48 46" stroke-linecap="round"/>
+                </g>
+              </svg>
+            </button>
+            <figcaption>
+              <strong class="tile-title">Tiling &amp; splashbacks</strong>
+              <!-- EDIT: sample caption detail — describe the real job -->
+              <span class="tile-sub">Porcelain floor &amp; wall tiles, laid level and grouted clean</span>
+            </figcaption>
+          </figure>
+
+          <figure class="tile reveal">
+            <button class="tile-btn" type="button" aria-label="View larger: exterior and garden work — fence panels reset and decking treated">
+              <svg viewBox="0 0 400 300" role="img" aria-label="Illustration of exterior and garden work" focusable="false">
+                <defs><linearGradient id="g6" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16294a"/><stop offset="1" stop-color="#0b1626"/></linearGradient></defs>
+                <rect width="400" height="300" fill="url(#g6)"/>
+                <path d="M0 300 400 140v160z" fill="#ff7a1a" opacity=".12"/>
+                <g fill="none" stroke="#ff7a1a" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M120 230v-70l16-24 16 24v70M152 230v-70l16-24 16 24v70M184 230v-70l16-24 16 24v70M216 230v-70l16-24 16 24v70"/>
+                  <path d="M110 180h150M110 214h150"/>
+                </g>
+              </svg>
+            </button>
+            <figcaption>
+              <strong class="tile-title">Exterior &amp; garden work</strong>
+              <!-- EDIT: sample caption detail — describe the real job -->
+              <span class="tile-sub">Fence panels replaced, posts reset &amp; decking treated</span>
+            </figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= WHY CHOOSE KJT ======================= -->
+    <section class="section" id="why" aria-labelledby="why-heading">
+      <div class="container">
+        <p class="eyebrow">The KJT difference</p>
+        <h2 id="why-heading" class="section-title">Why choose KJT Services</h2>
+        <p class="section-lead">Plenty of people can do the work. Fewer do it properly, tidily, and without the runaround. Here's what you can hold us to.</p>
+
+        <ul class="benefit-grid">
+          <li class="benefit reveal">
+            <span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 2 3 6v6c0 5 3.8 8.6 9 10 5.2-1.4 9-5 9-10V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8.5 12 2.5 2.5L15.5 9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div>
+              <h3>Free, no-obligation quotes</h3>
+              <p>A clear written price before any work starts — and the price we quote is the price you pay.</p>
+            </div>
+          </li>
+          <li class="benefit reveal">
+            <span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+            <div>
+              <h3>One point of contact</h3>
+              <p>You deal with Kieran directly from first message to final walkthrough — no middlemen, no mixed messages.</p>
+            </div>
+          </li>
+          <li class="benefit reveal">
+            <span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M4 20h16M6 20 8 6h8l2 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9.5 10h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+            <div>
+              <h3>Tidy workmanship</h3>
+              <p>Dust sheets down, mess cleared, and your home respected — left clean at the end of every working day.</p>
+            </div>
+          </li>
+          <li class="benefit reveal">
+            <span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3.5 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div>
+              <h3>Turn up when we say</h3>
+              <p>Agreed dates kept, and if anything ever changes you'll hear it from us first — not silence.</p>
+            </div>
+          </li>
+          <li class="benefit reveal">
+            <span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M8 10h8M8 14h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M21 12a9 9 0 1 0-3.5 7.1L21 20l-.6-3.4A8.9 8.9 0 0 0 21 12z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span>
+            <div>
+              <h3>Honest advice</h3>
+              <p>If a job isn't worth doing — or someone else would do it better — we'll tell you straight before you spend a penny.</p>
+            </div>
+          </li>
+          <li class="benefit reveal">
+            <span class="benefit-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 3 4 7v5c0 4.4 3.4 7.6 8 9 4.6-1.4 8-4.6 8-9V7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M12 8v5M12 16v.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span>
+            <div>
+              <!-- EDIT: only keep this card if you hold public liability
+                   insurance — and update the wording to match your cover -->
+              <h3>Fully insured</h3>
+              <p>Public liability insurance in place for every job, so your home is protected while we work.</p>
+            </div>
+          </li>
+        </ul>
+
+        <!-- EDIT: sample wording — make this personal promise your own -->
+        <p class="why-signoff reveal">
+          “If it's got my name on it, it's done properly. That's the whole business.”
+          <span class="why-signoff-name">Kieran Townson — Owner, KJT Services</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================= TESTIMONIALS ======================= -->
+    <!-- EDIT: replace with real customer reviews. These three are
+         realistic SAMPLES written as placeholders — swap in genuine
+         feedback (e.g. from your Facebook recommendations), use your
+         customers' real first names + last initials, and update the
+         initials in the avatar circles + the job-type tags to match. -->
+    <section class="section section-alt" id="testimonials" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-head-copy">
+            <p class="eyebrow">Word of mouth</p>
+            <h2 id="testimonials-heading" class="section-title">What customers say</h2>
+            <p class="section-lead">Most of our work comes from repeat customers and recommendations.</p>
+          </div>
+          <a class="link-more" href="https://www.facebook.com/p/KJT-Services-61572995855785/" rel="noopener" target="_blank">Read reviews on Facebook <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        </div>
+
+        <div class="testimonial-grid">
+          <blockquote class="testimonial reveal">
+            <div class="t-head">
+              <span class="t-avatar" aria-hidden="true">SM</span>
+              <div class="t-id">
+                <cite>Sarah M.</cite>
+                <span class="t-tag">Bathroom refit</span>
+              </div>
+            </div>
+            <div class="stars" role="img" aria-label="Rated 5 out of 5 stars"><span aria-hidden="true">★★★★★</span></div>
+            <p>“Brilliant from start to finish — quick quote, tidy work, and the bathroom looks fantastic. Wouldn't hesitate to recommend KJT to anyone.”</p>
+          </blockquote>
+
+          <blockquote class="testimonial reveal">
+            <div class="t-head">
+              <span class="t-avatar" aria-hidden="true">DR</span>
+              <div class="t-id">
+                <cite>David R.</cite>
+                <span class="t-tag">Decorating &amp; repairs</span>
+              </div>
+            </div>
+            <div class="stars" role="img" aria-label="Rated 5 out of 5 stars"><span aria-hidden="true">★★★★★</span></div>
+            <p>“Turned up when he said he would, did exactly what was quoted, and left everything spotless at the end of each day. Rare these days!”</p>
+          </blockquote>
+
+          <blockquote class="testimonial reveal">
+            <div class="t-head">
+              <span class="t-avatar" aria-hidden="true">LT</span>
+              <div class="t-id">
+                <cite>Lauren T.</cite>
+                <span class="t-tag">Property maintenance</span>
+              </div>
+            </div>
+            <div class="stars" role="img" aria-label="Rated 5 out of 5 stars"><span aria-hidden="true">★★★★★</span></div>
+            <p>“Had a list of odd jobs building up for months. All sorted in a day — friendly, professional and great value. Already booked him again.”</p>
+          </blockquote>
+        </div>
+
+        <p class="testimonial-foot">Want to hear it first-hand? Happy to put you in touch with recent customers — <a href="quote.html">just ask when you enquire</a>.</p>
+      </div>
+    </section>
+
+    <!-- ======================= SERVICE AREA ======================= -->
+    <!-- EDIT: replace "Yourtown" and ALL of the placeholder town chips
+         below with your real base town and the areas you actually
+         cover. Delete any chips you don't need. -->
+    <section class="section" id="areas" aria-labelledby="areas-heading">
+      <div class="container area-inner">
+        <div>
+          <p class="eyebrow">Where we work</p>
+          <h2 id="areas-heading" class="section-title">Serving Yourtown &amp; surrounding areas</h2>
+          <p class="section-lead">Based in Yourtown, covering homes within roughly 15 miles. If you're nearby, you're covered.</p>
+          <ul class="area-chips">
+            <li class="chip chip-home">Yourtown</li>
+            <li class="chip">Northley</li>
+            <li class="chip">Eastfield</li>
+            <li class="chip">Westbrook</li>
+            <li class="chip">Southgate</li>
+            <li class="chip">Millbridge</li>
+            <li class="chip">Oakhurst</li>
+          </ul>
+          <p class="area-note">Just outside these areas? <a href="quote.html">Ask anyway</a> — for the right job we're happy to travel a little further.</p>
+        </div>
+
+        <svg class="area-map" viewBox="0 0 320 320" role="img" aria-label="Illustration of the local service area" focusable="false">
+          <defs><linearGradient id="mapg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#16294a"/><stop offset="1" stop-color="#0b1626"/></linearGradient></defs>
+          <circle cx="160" cy="160" r="150" fill="url(#mapg)" stroke="rgba(255,255,255,0.09)"/>
+          <circle cx="160" cy="160" r="110" fill="none" stroke="rgba(255,122,26,0.25)" stroke-dasharray="5 7"/>
+          <circle cx="160" cy="160" r="66" fill="none" stroke="rgba(255,122,26,0.4)" stroke-dasharray="5 7"/>
+          <circle cx="98" cy="104" r="5" fill="#ff7a1a" opacity=".55"/>
+          <circle cx="228" cy="92" r="5" fill="#ff7a1a" opacity=".55"/>
+          <circle cx="250" cy="196" r="5" fill="#ff7a1a" opacity=".55"/>
+          <circle cx="118" cy="238" r="5" fill="#ff7a1a" opacity=".55"/>
+          <circle cx="200" cy="250" r="5" fill="#ff7a1a" opacity=".55"/>
+          <circle cx="72" cy="176" r="5" fill="#ff7a1a" opacity=".55"/>
+          <path d="M160 108a34 34 0 0 0-34 34c0 25 34 54 34 54s34-29 34-54a34 34 0 0 0-34-34z" fill="#ff7a1a"/>
+          <circle cx="160" cy="142" r="13" fill="#0b1626"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ======================= FAQ ======================= -->
+    <section class="section section-deep" id="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <p class="eyebrow">Good to know</p>
+        <h2 id="faq-heading" class="section-title">Frequently asked questions</h2>
+        <p class="section-lead">The things customers usually ask before booking. Anything else — just ask.</p>
+
+        <div class="faq-list">
+          <details class="faq reveal">
+            <summary>Is the quote really free?</summary>
+            <p class="faq-a">Yes — completely. We'll visit, look at the job properly, and give you a clear written price. There's no call-out fee for quotes and no obligation to go ahead.</p>
+          </details>
+
+          <details class="faq reveal">
+            <summary>How quickly can you start?</summary>
+            <!-- EDIT: guessed lead times — adjust to your real diary -->
+            <p class="faq-a">Small jobs can often be fitted in within a week or two; larger projects are usually booked a few weeks ahead. You'll get a realistic start date with your quote — and we stick to it.</p>
+          </details>
+
+          <details class="faq reveal">
+            <summary>Do you take on small jobs?</summary>
+            <p class="faq-a">Absolutely — no job too small. A sticking door, a shelf, a single room to paint: the small stuff is where most of our long-term customers started.</p>
+          </details>
+
+          <details class="faq reveal">
+            <summary>Are you insured?</summary>
+            <!-- EDIT: confirm your insurance cover before publishing
+                 this answer — update or remove it if it's not accurate -->
+            <p class="faq-a">Yes — public liability insurance is in place for every job. Happy to show you the certificate before work starts.</p>
+          </details>
+
+          <details class="faq reveal">
+            <summary>How and when do I pay?</summary>
+            <!-- EDIT: guessed payment terms — set out how YOU work -->
+            <p class="faq-a">For most jobs, nothing is due until the work is finished and you're happy — then payment by bank transfer or cash. Larger projects may be split into agreed stages, all set out in writing with your quote.</p>
+          </details>
+
+          <details class="faq reveal">
+            <summary>Is there VAT on top of the quote?</summary>
+            <!-- EDIT: set this answer to match your actual VAT status —
+                 if you ARE VAT-registered, say whether prices include
+                 or exclude VAT instead -->
+            <p class="faq-a">No — the price on your written quote is the full amount you pay. We're not VAT-registered, so nothing gets added on top and there are no surprises at the end.</p>
+          </details>
+
+          <details class="faq reveal">
+            <summary>Do you supply materials, or should I?</summary>
+            <p class="faq-a">Either works. We can supply and collect everything (itemised in your quote), or fit materials you've already bought — whichever suits you and your budget.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= FINAL CTA ======================= -->
+    <section class="cta-band" aria-labelledby="cta-heading">
+      <div class="container cta-inner">
+        <div>
+          <h2 id="cta-heading">Got a job that needs doing?</h2>
+          <p>Tell us what you need and we'll get back to you with a free, no-obligation quote — usually within one working day.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-dark btn-lg" href="quote.html">Get a Free Quote</a>
+          <a class="btn btn-ghost-dark btn-lg" href="tel:+447837924403">Call 07837 924403</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="site-footer" id="contact">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <p class="brand footer-brand"><span class="brand-mark" aria-hidden="true">KJT</span> <span class="brand-name">Services</span></p>
+        <p class="footer-blurb">A trustworthy professional service finished to the highest of standards. Message for a free quote or give us a call.</p>
+        <p class="footer-cta"><a class="btn btn-primary" href="quote.html">Get a Free Quote</a></p>
+      </div>
+
+      <div class="footer-col">
+        <h2 class="footer-heading">Contact</h2>
+        <ul class="footer-list">
+          <li>
+            <a href="tel:+447837924403">07837 924403</a>
+          </li>
+          <li>
+            <a href="mailto:kieran.townson@outlook.com">kieran.townson@outlook.com</a>
+          </li>
+          <li>
+            <!-- EDIT: replace with your real town / service area -->
+            Serving Yourtown &amp; surrounding areas
+          </li>
+          <li>
+            <!-- EDIT: replace with your real working hours -->
+            Mon–Sat, 8am–6pm
+          </li>
+          <li>
+            <a href="https://www.facebook.com/p/KJT-Services-61572995855785/" rel="noopener" target="_blank">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.2 0-1-.1-1.9-.1-1.9 0-3.3 1.2-3.3 3.4V11H8.5v3h2.7v7z" fill="currentColor"/></svg>
+              Find us on Facebook
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h2 class="footer-heading">Quick links</h2>
+        <ul class="footer-list">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#gallery">Our Work</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#faq">FAQs</a></li>
+          <li><a href="quote.html">Get a Quote</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 KJT Services. All rights reserved.</p>
+        <p>Done properly, or not at all.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- back to top: a plain anchor, so it still works without JS;
+       script.js only handles fading it in after you scroll -->
+  <a class="back-to-top" href="#top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
