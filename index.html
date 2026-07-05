@@ -16,12 +16,13 @@
                          finished to the highest of standards"
       - Phone:          07837 924403
       - Email:          kieran.townson@outlook.com
+      - Area:           Deeside (CH5) & surrounding areas
       - Facebook:       facebook.com/p/KJT-Services-61572995855785/
 
     PLACEHOLDERS TO REPLACE:
       - Website address            (og:url meta tag — set once live)
-      - Town / service area        (structured data, hero, service-
-                                    area section chips, footer)
+      - Service-area town chips    (nearby CH5 towns are pre-filled —
+                                    trim or extend to what's covered)
       - Stats strip numbers        (jobs completed / years / rating —
                                     guessed starting figures)
       - Exact list of services     (services section + quote form
@@ -38,14 +39,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- tints the browser chrome to match the dark header -->
   <meta name="theme-color" content="#070f1c">
-  <title>KJT Services — Home Improvements &amp; Property Maintenance</title>
-  <meta name="description" content="KJT Services — a trustworthy, professional home improvement and property maintenance service, finished to the highest of standards. Free quotes. Call 07837 924403.">
+  <title>KJT Services — Home Improvements &amp; Property Maintenance in Deeside</title>
+  <meta name="description" content="KJT Services — a trustworthy, professional home improvement and property maintenance service in Deeside (CH5) &amp; surrounding areas, finished to the highest of standards. Free quotes. Call 07837 924403.">
 
   <!-- Open Graph (how the site looks when shared on Facebook etc.) -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="KJT Services">
-  <meta property="og:title" content="KJT Services — Home Improvements &amp; Property Maintenance">
-  <meta property="og:description" content="A trustworthy professional service finished to the highest of standards. Free, no-obligation quotes — call 07837 924403.">
+  <meta property="og:title" content="KJT Services — Home Improvements &amp; Property Maintenance in Deeside">
+  <meta property="og:description" content="A trustworthy professional service in Deeside (CH5) &amp; surrounding areas, finished to the highest of standards. Free, no-obligation quotes — call 07837 924403.">
   <meta property="og:locale" content="en_GB">
   <!-- EDIT: once the site is live, uncomment these two lines and set
        the real web address plus a real photo for the share image
@@ -63,13 +64,10 @@
   <script>document.documentElement.classList.add("js")</script>
 
   <!-- EDIT: structured data for Google. Only CONFIRMED facts are
-       published live (search engines treat this block as fact, so
-       placeholder towns/hours must not ship in it). Once your real
-       town and hours are set, add these lines back into the JSON
-       below, just before the closing brace:
-         ,"address": { "@type": "PostalAddress", "addressLocality": "Yourtown", "addressCountry": "GB" },
-         "areaServed": "Yourtown and surrounding areas",
-         "openingHoursSpecification": [{ "@type": "OpeningHoursSpecification",
+       published live (search engines treat this block as fact). Once
+       the real working hours are confirmed, add this line back into
+       the JSON below, just before the closing brace:
+         ,"openingHoursSpecification": [{ "@type": "OpeningHoursSpecification",
            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
            "opens": "08:00", "closes": "18:00" }]
   -->
@@ -78,12 +76,14 @@
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
     "name": "KJT Services",
-    "description": "Home improvements and property maintenance — a trustworthy professional service finished to the highest of standards. Free, no-obligation quotes.",
+    "description": "Home improvements and property maintenance in Deeside (CH5) and surrounding areas — a trustworthy professional service finished to the highest of standards. Free, no-obligation quotes.",
     "slogan": "A trustworthy professional service finished to the highest of standards",
     "founder": { "@type": "Person", "name": "Kieran Townson" },
     "telephone": "+447837924403",
     "email": "kieran.townson@outlook.com",
     "sameAs": ["https://www.facebook.com/p/KJT-Services-61572995855785/"],
+    "address": { "@type": "PostalAddress", "addressLocality": "Deeside", "addressCountry": "GB" },
+    "areaServed": "Deeside (CH5) and surrounding areas",
     "priceRange": "££"
   }
   </script>
@@ -131,9 +131,7 @@
     <section class="hero" aria-labelledby="hero-heading">
       <div class="container hero-inner">
         <div class="hero-copy">
-          <p class="eyebrow">Home improvements &amp; property maintenance
-            <!-- EDIT: add your town/area, e.g. "…maintenance in Sheffield &amp; surrounds" -->
-          </p>
+          <p class="eyebrow">Home improvements &amp; property maintenance — Deeside &amp; surrounds</p>
           <h1 id="hero-heading">A trustworthy, professional service — finished to the <em>highest of standards.</em></h1>
           <p class="hero-sub">From small repairs to full room refurbishments, KJT Services takes care of the jobs on your list — done properly, on time, and at a fair price. No job too small.</p>
           <div class="hero-actions">
@@ -596,23 +594,26 @@
     </section>
 
     <!-- ======================= SERVICE AREA ======================= -->
-    <!-- EDIT: replace "Yourtown" and ALL of the placeholder town chips
-         below with your real base town and the areas you actually
-         cover. Delete any chips you don't need. -->
+    <!-- EDIT: the base area (Deeside / CH5) is confirmed; the town chips
+         are the places in and around CH5 — remove any you don't cover
+         or add ones you do. -->
     <section class="section" id="areas" aria-labelledby="areas-heading">
       <div class="container area-inner">
         <div>
           <p class="eyebrow">Where we work</p>
-          <h2 id="areas-heading" class="section-title">Serving Yourtown &amp; surrounding areas</h2>
-          <p class="section-lead">Based in Yourtown, covering homes within roughly 15 miles. If you're nearby, you're covered.</p>
+          <h2 id="areas-heading" class="section-title">Serving Deeside (CH5) &amp; surrounding areas</h2>
+          <p class="section-lead">Based in the CH5 area, we cover Deeside and everywhere within easy reach of it. If you're nearby, you're covered.</p>
           <ul class="area-chips">
-            <li class="chip chip-home">Yourtown</li>
-            <li class="chip">Northley</li>
-            <li class="chip">Eastfield</li>
-            <li class="chip">Westbrook</li>
-            <li class="chip">Southgate</li>
-            <li class="chip">Millbridge</li>
-            <li class="chip">Oakhurst</li>
+            <li class="chip chip-home">Deeside (CH5)</li>
+            <li class="chip">Connah's Quay</li>
+            <li class="chip">Shotton</li>
+            <li class="chip">Queensferry</li>
+            <li class="chip">Hawarden</li>
+            <li class="chip">Ewloe</li>
+            <li class="chip">Buckley</li>
+            <li class="chip">Mold</li>
+            <li class="chip">Flint</li>
+            <li class="chip">Chester</li>
           </ul>
           <p class="area-note">Just outside these areas? <a href="quote.html">Ask anyway</a> — for the right job we're happy to travel a little further.</p>
         </div>
@@ -722,8 +723,7 @@
             <a href="mailto:kieran.townson@outlook.com">kieran.townson@outlook.com</a>
           </li>
           <li>
-            <!-- EDIT: replace with your real town / service area -->
-            Serving Yourtown &amp; surrounding areas
+            Serving Deeside (CH5) &amp; surrounding areas
           </li>
           <li>
             <!-- EDIT: replace with your real working hours -->
