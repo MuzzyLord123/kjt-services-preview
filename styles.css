@@ -1,6 +1,6 @@
 /* ============================================================
    KJT SERVICES — shared stylesheet (index.html + quote.html)
-   v3 — white base / blue-black bands / blue accent.
+   v3 — primary white, secondary black bands, blue accent.
    System font stack, no external assets — works fully offline.
    ============================================================ */
 
@@ -63,9 +63,9 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-h) + 1rem);
-  /* matches the header/footer colour so iOS rubber-band overscroll
-     doesn't reveal a lighter band at either end of the page */
-  background: var(--navy-950);
+  /* matches the white header/hero so iOS rubber-band overscroll at the
+     top of the page blends in (the common overscroll direction) */
+  background: var(--paper);
   scrollbar-color: #a9bad2 var(--paper-alt);
 }
 
@@ -94,11 +94,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* The dark bands keep the black treatment. Everything inside them
-   re-themes automatically through these scoped token overrides —
-   components only ever read the tokens, never raw colours. */
-.site-header, .hero, .page-hero, .stats-strip,
-.next-steps, .site-footer, .lightbox {
+/* Black is the SECONDARY colour: it appears only in these supporting
+   bands. Everything inside them re-themes automatically through these
+   scoped token overrides — components only read tokens, never raw
+   colours. */
+.stats-strip, .next-steps, .site-footer, .lightbox {
   --text: #f2f6fc;
   --text-mute: #a9b8cc;
   --line: rgba(255, 255, 255, 0.1);
@@ -218,13 +218,13 @@ h1, h2, h3 { line-height: 1.15; letter-spacing: -0.015em; font-weight: 800; }
 /* ---------- Header / nav ---------- */
 .site-header {
   position: sticky; top: 0; z-index: 100;
-  background: rgba(5, 7, 11, 0.92);
+  background: rgba(255, 255, 255, 0.92);
   -webkit-backdrop-filter: blur(8px); /* Safari < 18 */
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
   transition: box-shadow 0.25s ease;
 }
-.site-header.scrolled { box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45); }
+.site-header.scrolled { box-shadow: 0 6px 24px rgba(20, 35, 70, 0.16); }
 
 .nav-wrap {
   display: flex; align-items: center; justify-content: space-between;
@@ -351,7 +351,7 @@ h1, h2, h3 { line-height: 1.15; letter-spacing: -0.015em; font-weight: 800; }
   .js .site-nav {
     position: absolute;
     top: 100%; left: 0; right: 0;
-    background: var(--navy-950);
+    background: var(--paper);
     border-bottom: 1px solid var(--line);
     box-shadow: var(--shadow);
     display: none;
@@ -383,9 +383,9 @@ h1, h2, h3 { line-height: 1.15; letter-spacing: -0.015em; font-weight: 800; }
 .page-hero {
   position: relative;
   background:
-    radial-gradient(60rem 30rem at 85% -10%, rgba(37, 99, 235, 0.18), transparent 60%),
-    radial-gradient(40rem 24rem at -10% 110%, rgba(37, 99, 235, 0.07), transparent 55%),
-    linear-gradient(160deg, var(--navy-950) 0%, var(--navy-900) 55%, var(--navy-800) 100%);
+    radial-gradient(60rem 30rem at 85% -10%, rgba(37, 99, 235, 0.1), transparent 60%),
+    radial-gradient(40rem 24rem at -10% 110%, rgba(37, 99, 235, 0.05), transparent 55%),
+    linear-gradient(160deg, #ffffff 0%, #f3f6fb 55%, #e8eef7 100%);
   overflow: hidden;
 }
 .hero::before,
@@ -394,7 +394,7 @@ h1, h2, h3 { line-height: 1.15; letter-spacing: -0.015em; font-weight: 800; }
   position: absolute; inset: 0;
   background: repeating-linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.028) 0 2px,
+    rgba(15, 25, 45, 0.02) 0 2px,
     transparent 2px 26px
   );
   pointer-events: none;
@@ -470,7 +470,7 @@ h1, h2, h3 { line-height: 1.15; letter-spacing: -0.015em; font-weight: 800; }
 /* hero trust card — the "reason to believe" panel beside the headline */
 .hero-card {
   position: relative;
-  background: rgba(19, 24, 32, 0.8);
+  background: rgba(255, 255, 255, 0.85);
   border: 1px solid var(--line-soft);
   border-radius: var(--radius);
   padding: clamp(1.25rem, 3vw, 1.9rem);
