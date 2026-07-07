@@ -332,7 +332,12 @@
              To use a real photo, replace the whole <svg>…</svg> inside
              the <button> with an image tag, e.g.:
 
-               <img src="photos/job1.jpg" alt="Fitted bathroom with grey tiles in [town]">
+               <img src="photos/job1.jpg" alt="Fitted bathroom with grey tiles in Deeside"
+                    loading="lazy" width="800" height="600">
+
+             (loading="lazy" keeps the page fast; width/height stop the
+             layout jumping while photos load — use your photo's real
+             proportions. Resize photos to ~1200px wide before upload.)
 
              Keep the <button> and the two-line <figcaption> as they
              are (bold title + one-line detail) — the lightbox and its
