@@ -329,5 +329,17 @@
         submitBtn.textContent = defaultLabel;
       }
     });
+
+    // Returning from FormSubmit's redirect (?sent=1): show the
+    // thank-you banner and move focus to it so screen readers
+    // announce the confirmation. (Without JS the #quote-sent
+    // fragment shows the banner via the CSS :target rule.)
+    if (new URLSearchParams(window.location.search).get("sent")) {
+      var sentNote = document.getElementById("quote-sent");
+      if (sentNote) {
+        sentNote.classList.add("is-shown");
+        sentNote.focus();
+      }
+    }
   }
 })();
