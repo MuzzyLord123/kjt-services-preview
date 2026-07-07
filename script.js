@@ -236,6 +236,58 @@
     });
   }
 
+  /* ---------- Testimonial carousel ---------- */
+  // One review shows at a time, fading in; auto-advances unless the
+  // visitor is reading (hover/focus) or prefers reduced motion.
+  // Without JS the CSS keeps all reviews stacked and controls hidden.
+  var tCarousel = document.querySelector(".t-carousel");
+
+  if (tCarousel) {
+    var tSlides = Array.prototype.slice.call(tCarousel.querySelectorAll(".t-slide"));
+    var tDotsBox = tCarousel.querySelector(".t-dots");
+    var tIndex = 0;
+    var tTimer = null;
+
+    var tDots = tSlides.map(function (_, i) {
+      var dot = document.createElement("button");
+      dot.type = "button";
+      dot.className = "t-dot";
+      dot.setAttribute("aria-label", "Show review " + (i + 1) + " of " + tSlides.length);
+      dot.addEventListener("click", function () { tShow(i); tRestart(); });
+      tDotsBox.appendChild(dot);
+      return dot;
+    });
+
+    function tShow(i) {
+      tIndex = (i + tSlides.length) % tSlides.length;
+      tSlides.forEach(function (slide, j) { slide.hidden = j !== tIndex; });
+      tDots.forEach(function (dot, j) { dot.classList.toggle("is-active", j === tIndex); });
+    }
+
+    function tStop() {
+      if (tTimer) { window.clearInterval(tTimer); tTimer = null; }
+    }
+
+    function tRestart() {
+      tStop();
+      if (!reduceMotion) {
+        tTimer = window.setInterval(function () { tShow(tIndex + 1); }, 6500);
+      }
+    }
+
+    tCarousel.querySelector(".t-prev").addEventListener("click", function () { tShow(tIndex - 1); tRestart(); });
+    tCarousel.querySelector(".t-next").addEventListener("click", function () { tShow(tIndex + 1); tRestart(); });
+
+    // don't rotate away from a review someone is reading or tabbing through
+    tCarousel.addEventListener("mouseenter", tStop);
+    tCarousel.addEventListener("mouseleave", tRestart);
+    tCarousel.addEventListener("focusin", tStop);
+    tCarousel.addEventListener("focusout", tRestart);
+
+    tShow(0);
+    tRestart();
+  }
+
   /* ---------- Quote form niceties ---------- */
   var quoteForm = document.getElementById("quote-form");
 

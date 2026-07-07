@@ -29,8 +29,9 @@
                                     dropdown — match your real work)
       - Gallery photos + captions  (5 placeholder tiles — swap in
                                     real job photos, see comments)
-      - Testimonials               (3 sample reviews — replace with
-                                    real customer feedback)
+      - Testimonials               (REAL Facebook reviews, lightly
+                                    condensed — add new ones as they
+                                    come in; keep the same structure)
       - FAQ answers                (insurance, payment, start times —
                                     confirm every claim is true)
       - Working hours              (footer + quote page + JSON-LD)
@@ -151,12 +152,10 @@
         <!-- hero trust card: instant proof next to the headline -->
         <aside class="hero-card reveal" aria-label="Customer rating and service promises">
           <div class="hero-card-rating">
-            <div class="stars" role="img" aria-label="Rated 5 out of 5 stars"><span aria-hidden="true">★★★★★</span></div>
+            <span class="rec-badge" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M3 10h3v11H3a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1zm5 11V9.6L12.6 3a1.7 1.7 0 0 1 3 1.4L14.8 9H19a2.6 2.6 0 0 1 2.5 3.3l-1.7 6A2.6 2.6 0 0 1 17.3 21z" fill="currentColor"/></svg></span>
             <div>
-              <!-- EDIT: guessed rating summary — match your real Facebook
-                   recommendations before publishing -->
-              <strong>5.0 from local customers</strong>
-              <small>Recommended on Facebook</small>
+              <strong>Recommended on Facebook</strong>
+              <small>By local customers in &amp; around Deeside</small>
             </div>
           </div>
           <ul class="hero-card-list">
@@ -185,9 +184,10 @@
     </section>
 
     <!-- ======================= STATS / TRUST STRIP ======================= -->
-    <!-- EDIT: the first three figures below are sensible GUESSES to get
+    <!-- EDIT: the first two figures below are sensible GUESSES to get
          you started — replace them with your real numbers (or delete a
-         stat you can't stand behind). -->
+         stat you can't stand behind). The Facebook one reflects the
+         page's real recommendations. -->
     <section class="stats-strip" aria-label="KJT Services at a glance">
       <div class="container stats-grid">
         <div class="stat">
@@ -199,12 +199,12 @@
           <span class="stat-label">Hands-on experience</span>
         </div>
         <div class="stat">
-          <span class="stat-num">5&#9733;</span>
-          <span class="stat-label">Rated by customers</span>
+          <span class="stat-num">100%</span>
+          <span class="stat-label">Recommended on Facebook</span>
         </div>
         <div class="stat">
-          <span class="stat-num">100%</span>
-          <span class="stat-label">Free, no-obligation quotes</span>
+          <span class="stat-num">Free</span>
+          <span class="stat-label">No-obligation quotes</span>
         </div>
       </div>
     </section>
@@ -506,11 +506,11 @@
     </section>
 
     <!-- ======================= TESTIMONIALS ======================= -->
-    <!-- EDIT: replace with real customer reviews. These three are
-         realistic SAMPLES written as placeholders — swap in genuine
-         feedback (e.g. from your Facebook recommendations), use your
-         customers' real first names + last initials, and update the
-         initials in the avatar circles + the job-type tags to match. -->
+    <!-- REAL customer reviews, taken from the KJT Services Facebook
+         recommendations (lightly condensed for space — the full
+         versions live on the Facebook page). The carousel rotates
+         automatically, pauses while the visitor reads or focuses it,
+         and stays static without JS or with reduced-motion set. -->
     <section class="section section-alt" id="testimonials" aria-labelledby="testimonials-heading">
       <div class="container">
         <div class="section-head">
@@ -522,42 +522,62 @@
           <a class="link-more" href="https://www.facebook.com/p/KJT-Services-61572995855785/" rel="noopener" target="_blank">Read reviews on Facebook <span class="arrow" aria-hidden="true">&rarr;</span></a>
         </div>
 
-        <div class="testimonial-grid">
-          <blockquote class="testimonial reveal">
-            <div class="t-head">
-              <span class="t-avatar" aria-hidden="true">SM</span>
-              <div class="t-id">
-                <cite>Sarah M.</cite>
-                <span class="t-tag">Bathroom refit</span>
+        <div class="t-carousel reveal" aria-roledescription="carousel" aria-label="Customer reviews">
+          <div class="t-slides">
+            <blockquote class="testimonial t-slide" role="group" aria-roledescription="slide" aria-label="Review 1 of 4">
+              <div class="t-head">
+                <span class="t-avatar" aria-hidden="true">SC</span>
+                <div class="t-id">
+                  <cite>Sharon Clark</cite>
+                  <span class="t-tag">Garden fencing</span>
+                </div>
               </div>
-            </div>
-            <div class="stars" role="img" aria-label="Rated 5 out of 5 stars"><span aria-hidden="true">★★★★★</span></div>
-            <p>“Brilliant from start to finish — quick quote, tidy work, and the bathroom looks fantastic. Wouldn't hesitate to recommend KJT to anyone.”</p>
-          </blockquote>
+              <p class="t-rec"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 10h3v11H3a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1zm5 11V9.6L12.6 3a1.7 1.7 0 0 1 3 1.4L14.8 9H19a2.6 2.6 0 0 1 2.5 3.3l-1.7 6A2.6 2.6 0 0 1 17.3 21z" fill="currentColor"/></svg>Recommends KJT Services</p>
+              <p>“Extremely pleased with the new fencing in my front garden — completed to a very high standard, with great care and attention to detail. Kieran was reliable, professional, and left the area tidy. The new fence looks fantastic. I would highly recommend him to anyone looking for quality fencing work.”</p>
+            </blockquote>
 
-          <blockquote class="testimonial reveal">
-            <div class="t-head">
-              <span class="t-avatar" aria-hidden="true">DR</span>
-              <div class="t-id">
-                <cite>David R.</cite>
-                <span class="t-tag">Repairs &amp; maintenance</span>
+            <blockquote class="testimonial t-slide" role="group" aria-roledescription="slide" aria-label="Review 2 of 4">
+              <div class="t-head">
+                <span class="t-avatar" aria-hidden="true">AT</span>
+                <div class="t-id">
+                  <cite>Anne Tapp</cite>
+                  <span class="t-tag">Drive &amp; patio</span>
+                </div>
               </div>
-            </div>
-            <div class="stars" role="img" aria-label="Rated 5 out of 5 stars"><span aria-hidden="true">★★★★★</span></div>
-            <p>“Turned up when he said he would, did exactly what was quoted, and left everything spotless at the end of each day. Rare these days!”</p>
-          </blockquote>
+              <p class="t-rec"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 10h3v11H3a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1zm5 11V9.6L12.6 3a1.7 1.7 0 0 1 3 1.4L14.8 9H19a2.6 2.6 0 0 1 2.5 3.3l-1.7 6A2.6 2.6 0 0 1 17.3 21z" fill="currentColor"/></svg>Recommends KJT Services</p>
+              <p>“Kieran power washed my block paved drive and patio, and completed some work where my porch had been. I found him extremely reliable and willing — nothing was too much trouble. I would certainly use him again and recommend him to others.”</p>
+            </blockquote>
 
-          <blockquote class="testimonial reveal">
-            <div class="t-head">
-              <span class="t-avatar" aria-hidden="true">LT</span>
-              <div class="t-id">
-                <cite>Lauren T.</cite>
-                <span class="t-tag">Property maintenance</span>
+            <blockquote class="testimonial t-slide" role="group" aria-roledescription="slide" aria-label="Review 3 of 4">
+              <div class="t-head">
+                <span class="t-avatar" aria-hidden="true">OW</span>
+                <div class="t-id">
+                  <cite>Owen WJ</cite>
+                  <span class="t-tag">Plastering</span>
+                </div>
               </div>
-            </div>
-            <div class="stars" role="img" aria-label="Rated 5 out of 5 stars"><span aria-hidden="true">★★★★★</span></div>
-            <p>“Had a list of odd jobs building up for months. All sorted in a day — friendly, professional and great value. Already booked him again.”</p>
-          </blockquote>
+              <p class="t-rec"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 10h3v11H3a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1zm5 11V9.6L12.6 3a1.7 1.7 0 0 1 3 1.4L14.8 9H19a2.6 2.6 0 0 1 2.5 3.3l-1.7 6A2.6 2.6 0 0 1 17.3 21z" fill="currentColor"/></svg>Recommends KJT Services</p>
+              <p>“Kieran did a brilliant job plastering our kitchen and living room in our first home. He even spotted an issue with our house structure and went above and beyond to help us fix it. Professional, friendly, highly recommend!”</p>
+            </blockquote>
+
+            <blockquote class="testimonial t-slide" role="group" aria-roledescription="slide" aria-label="Review 4 of 4">
+              <div class="t-head">
+                <span class="t-avatar" aria-hidden="true">ST</span>
+                <div class="t-id">
+                  <cite>Suze Thompson</cite>
+                  <span class="t-tag">Media wall</span>
+                </div>
+              </div>
+              <p class="t-rec"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 10h3v11H3a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1zm5 11V9.6L12.6 3a1.7 1.7 0 0 1 3 1.4L14.8 9H19a2.6 2.6 0 0 1 2.5 3.3l-1.7 6A2.6 2.6 0 0 1 17.3 21z" fill="currentColor"/></svg>Recommends KJT Services</p>
+              <p>“Kieran made a media wall in the orangery — excellent service and work, including the plastering. Very pleased with his work and his prices. Fast, efficient service, and cleaned up after. Would highly recommend to anyone.”</p>
+            </blockquote>
+          </div>
+
+          <div class="t-controls">
+            <button type="button" class="t-nav t-prev" aria-label="Previous review"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+            <div class="t-dots"></div>
+            <button type="button" class="t-nav t-next" aria-label="Next review"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          </div>
         </div>
 
         <p class="testimonial-foot">Want to hear it first-hand? Happy to put you in touch with recent customers — <a href="quote.html">just ask when you enquire</a>.</p>
